@@ -4,8 +4,7 @@ input = sys.stdin.readline
 for _ in range(int(input())):
     string = input()
     chk = 0
-    stack = []
-
+    
     for i in string:
         if(i == "("):
             chk += 1
