@@ -1,12 +1,14 @@
 import sys
 input = sys.stdin.readline
 
+cnt = 1
 def fib(n):
-    cnt = 0
+    global cnt
     if (n == 1 or n ==2):
         cnt += 1
-        return cnt
+        return 1
     else:
+        cnt += 1
         return (fib(n-1) + fib(n-2))
 
 def fibb(n):
