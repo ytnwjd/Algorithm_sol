@@ -8,9 +8,7 @@ while True:
     if (len(card) == 1):
         break
 
-    rm = card.pop(0)
-    print(rm, end=' ')
-    val = card.pop(0)
-    card.append(val)
+    print(card.pop(0), end=' ')
+    card.append(card.pop(0))
 
 print(card[0])
