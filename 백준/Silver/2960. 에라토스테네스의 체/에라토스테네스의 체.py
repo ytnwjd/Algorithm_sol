@@ -1,3 +1,4 @@
+# 에라토스테네스의 체
 import sys
 input = sys.stdin.readline
 
@@ -15,11 +16,8 @@ while (True):
     for i in num_list:
         if(i % did == 0):
             rm_list.append(i)
-    
-    for j in rm_list:
-        if (j in num_list):
-            num_list.remove(j)
-
+            num_list.remove(i)
+   
     cnt += 1
     did += 1
     
