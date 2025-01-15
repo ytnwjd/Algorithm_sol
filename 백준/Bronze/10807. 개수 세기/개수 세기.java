@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Scanner;
 
 public class Main {
@@ -7,18 +5,18 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         int n = sc.nextInt();
-        Collection<Integer> numList = new ArrayList<>();
+        int[] numList = new int[n];
 
-        for (int i = 1; i <= n; i++){
+        for (int i = 0; i < n; i++){
             int num = sc.nextInt();
-            numList.add(num);
+            numList[i] = num;
         }
 
         int find = sc.nextInt();
         int cnt = 0;
 
-       for (Integer num : numList){
-           if (num == find){
+       for (int i = 0; i < n; i++){
+           if (numList[i] == find){
                cnt ++;
            }
        }
