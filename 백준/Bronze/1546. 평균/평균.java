@@ -1,28 +1,27 @@
-import java.util.*;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
+        Scanner sc  = new Scanner(System.in);
         int n = sc.nextInt();
-        ArrayList<Integer> grade = new ArrayList<>();
 
-        for (int i = 0; i < n; i++) {
-            grade.add(sc.nextInt());
+        int[] num = new int[n];
+
+        for (int i=0; i<n; i++){
+            num[i] = sc.nextInt();
         }
 
-        System.out.println(cal_sum(grade)/n);
-    }
+        long sum = 0;
+        long max = 0;
 
-    public static double cal_sum(ArrayList<Integer> grade) {
-        int max = Collections.max(grade);
-        double sum = 0;
+        for (int i=0; i<n; i++){
+            if(num[i] > max){
+                max = num[i];
+            }
 
-        for(double i : grade) {
-            i = (i/max)*100;
-            sum += i;
+            sum += num[i];
         }
 
-        return sum;
+        System.out.println(sum * 100.0 / max / n);
     }
 }
