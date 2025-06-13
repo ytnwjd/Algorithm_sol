@@ -1,15 +1,16 @@
-import java.util.*;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
+        Scanner sc  = new Scanner(System.in);
         int n = sc.nextInt();
-        int sum = 0;
-        String str = sc.next();
 
-        for (char c: str.toCharArray()){
-            sum += Character.getNumericValue(c);
+        String sNum = sc.next();
+        char[] cNum = sNum.toCharArray();
+
+        int sum = 0;
+        for (int i = 0; i<n; i++){
+            sum += cNum[i] - '0';
         }
 
         System.out.println(sum);
